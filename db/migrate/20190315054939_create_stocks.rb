@@ -1,10 +1,8 @@
 class CreateStocks < ActiveRecord::Migration[5.2]
   def change
-    create_table :stocks do |t|
-      t.references :product, foreign_key: true
-      t.references :shop, foreign_key: true
-
-      t.timestamps
+    create_join_table :products, :shops do |t|
+      t.index :product_id
+      t.index :shop_id
     end
   end
 end
