@@ -10,6 +10,9 @@ class OrdersController < ApplicationController
 
   # GET /orders/1
   def show
+    @order.totalprice = @order.line_items.sum(:price)
+    @order.description = @order.line_items.to_ary()
+
     render json: @order
   end
 
@@ -46,6 +49,6 @@ class OrdersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def order_params
-      params.require(:order).permit(:reference, :name, :body)
+      params.require(:order).permit(:shop_id, :name, :body)
     end
 end

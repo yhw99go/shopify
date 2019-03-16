@@ -24,7 +24,8 @@ ActiveRecord::Schema.define(version: 2019_03_15_054939) do
 
   create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "shop_id"
-    t.decimal "price", precision: 10
+    t.text "description"
+    t.decimal "totalprice", precision: 10
     t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -43,8 +44,8 @@ ActiveRecord::Schema.define(version: 2019_03_15_054939) do
   end
 
   create_table "products_shops", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "product_id", null: false
-    t.bigint "shop_id", null: false
+    t.bigint "product_id"
+    t.bigint "shop_id"
     t.index ["product_id"], name: "index_products_shops_on_product_id"
     t.index ["shop_id"], name: "index_products_shops_on_shop_id"
   end

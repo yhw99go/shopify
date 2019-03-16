@@ -16,6 +16,13 @@ class LineItemsController < ApplicationController
   # POST /line_items
   def create
     @line_item = LineItem.new(line_item_params)
+    @product = Product.find(line_item_params[:product_id])
+    if @product.quantity.present? then
+      @product.quantity += 1 
+    else
+      @product.quantity = 1 
+    end
+    @line_item.price = @product.price
 
     if @line_item.save
       render json: @line_item, status: :created, location: @line_item
@@ -35,7 +42,11 @@ class LineItemsController < ApplicationController
 
   # DELETE /line_items/1
   def destroy
-    @line_item.destroy
+    @product = Product.find(line_item_params[:product_id])
+    if @product.quantity > 1 then
+      @product.quantity -= 1 
+      @line_item.destroy
+    end
   end
 
   private
@@ -46,6 +57,8 @@ class LineItemsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def line_item_params
-      params.require(:line_item).permit(:reference, :reference, :name, :body)
+      #@product = Product.find(params[:id])
+      #@order = Order.find(params[:id])
+      params.require(:line_item).permit(:product_id, :order_id, :name, :body, :price)
     end
 end
