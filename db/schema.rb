@@ -23,21 +23,30 @@ ActiveRecord::Schema.define(version: 2019_03_15_054939) do
   end
 
   create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "Shop_id"
+    t.bigint "shop_id"
     t.decimal "price", precision: 10
     t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["Shop_id"], name: "index_orders_on_Shop_id"
+    t.index ["shop_id"], name: "index_orders_on_shop_id"
   end
 
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "shop_id"
     t.string "name"
     t.text "description"
     t.decimal "price", precision: 10
     t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["shop_id"], name: "index_products_on_shop_id"
+  end
+
+  create_table "products_shops", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "product_id", null: false
+    t.bigint "shop_id", null: false
+    t.index ["product_id"], name: "index_products_shops_on_product_id"
+    t.index ["shop_id"], name: "index_products_shops_on_shop_id"
   end
 
   create_table "shops", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -46,18 +55,8 @@ ActiveRecord::Schema.define(version: 2019_03_15_054939) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "stocks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "product_id"
-    t.bigint "shop_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["product_id"], name: "index_stocks_on_product_id"
-    t.index ["shop_id"], name: "index_stocks_on_shop_id"
-  end
-
   add_foreign_key "line_items", "orders"
   add_foreign_key "line_items", "products"
-  add_foreign_key "orders", "Shops"
-  add_foreign_key "stocks", "products"
-  add_foreign_key "stocks", "shops"
+  add_foreign_key "orders", "shops"
+  add_foreign_key "products", "shops"
 end
