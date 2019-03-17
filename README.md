@@ -1,6 +1,6 @@
 # Shopify Internship API
 
-This project mainly using Ruby on Rail and MySQL as database
+This project mainly using Ruby on Rails and MySQL as database
 to migrate db
 
 `> rake db:migrate`
