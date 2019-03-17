@@ -4,7 +4,10 @@ class OrdersController < ApplicationController
   # GET /orders
   def index
     @orders = Order.all
-
+    for order in @orders
+      order.totalprice = order.line_items.sum(:price)
+      order.description = order.line_items.to_ary()
+    end
     render json: @orders
   end
 
@@ -12,6 +15,7 @@ class OrdersController < ApplicationController
   def show
     @order.totalprice = @order.line_items.sum(:price)
     @order.description = @order.line_items.to_ary()
+    @orders = Order.all
 
     render json: @order
   end

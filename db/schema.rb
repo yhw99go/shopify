@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_15_054939) do
+ActiveRecord::Schema.define(version: 2019_03_16_204604) do
 
   create_table "line_items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "product_id"
@@ -33,21 +33,19 @@ ActiveRecord::Schema.define(version: 2019_03_15_054939) do
   end
 
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "shop_id"
     t.string "name"
     t.text "description"
     t.decimal "price", precision: 10
     t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["shop_id"], name: "index_products_on_shop_id"
   end
 
   create_table "products_shops", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "product_id"
-    t.bigint "shop_id"
-    t.index ["product_id"], name: "index_products_shops_on_product_id"
-    t.index ["shop_id"], name: "index_products_shops_on_shop_id"
+    t.bigint "shop_id", null: false
+    t.bigint "product_id", null: false
+    t.index ["product_id", "shop_id"], name: "index_products_shops_on_product_id_and_shop_id"
+    t.index ["shop_id", "product_id"], name: "index_products_shops_on_shop_id_and_product_id"
   end
 
   create_table "shops", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -56,8 +54,7 @@ ActiveRecord::Schema.define(version: 2019_03_15_054939) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "line_items", "orders"
-  add_foreign_key "line_items", "products"
-  add_foreign_key "orders", "shops"
-  add_foreign_key "products", "shops"
+  add_foreign_key "line_items", "orders", on_delete: :cascade
+  add_foreign_key "line_items", "products", on_delete: :cascade
+  add_foreign_key "orders", "shops", on_delete: :cascade
 end

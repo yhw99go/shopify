@@ -1,4 +1,4 @@
 class Shop < ApplicationRecord
     has_and_belongs_to_many :products
-    has_many :orders
+    has_many :orders, dependent: :destroy
 end

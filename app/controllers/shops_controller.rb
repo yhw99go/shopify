@@ -4,7 +4,12 @@ class ShopsController < ApplicationController
   # GET /shops
   def index
     @shops = Shop.all
-
+    for shop in @shops
+      for order in shop.orders
+          order.totalprice = order.line_items.sum(:price)
+          order.description = order.line_items.to_ary()
+      end
+    end
     render json: @shops
   end
 
