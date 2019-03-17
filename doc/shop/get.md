@@ -4,7 +4,7 @@
 
 * **URL**
 
-  /users/:id
+  /shops/:id
 
 * **Method:**
 
