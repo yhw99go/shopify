@@ -1,6 +1,6 @@
 **Show Product**
 ----
-  Returns json data about a single product.
+  Return json data about a single product.
 
 * **URL**
 
