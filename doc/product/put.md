@@ -1,10 +1,10 @@
 **Update Shop**
 ----
-  Returns json data with updated product information.
+  Return json data with updated product information.
 
 * **URL**
 
-  /products/id
+  /products/:id
 
 * **Method:**
 
@@ -37,7 +37,7 @@
 
 **Content examples**
 
-Create a shop with new ID and given name on the local database where that Shop has empty orders and products
+Update a product with new name, description or prices
 
 ```json
 {
@@ -50,3 +50,6 @@ Create a shop with new ID and given name on the local database where that Shop h
     "updated_at": "2019-03-17T04:24:19.000Z"
 }
 ```
+## Notes
+
+* If the product change its price, related list_items price will update as well

@@ -1,6 +1,6 @@
 **Create Shop**
 ----
-  Returns json data with created single shop.
+  Return json data with created single product.
 
 * **URL**
 
@@ -28,7 +28,7 @@
 
 * **Success Response:**
 
-  * **Code:** 200 <br />
+  * **Code:** 201 CREATED <br />
  
 * **Error Response:**
 
@@ -38,17 +38,18 @@
 
 **Content examples**
 
-Create a shop with new ID and given name on the local database where that Shop has empty orders and products
+Create a product with new ID with given name, decription and price on the local database 
 
 ```json
 {
-    "id": 5,
+    "id": 4,
     "name": "SugarBeer",
     "description": "so sweet",
+    "line_items": [],
     "price": 80,
     "quantity": null,
-    "created_at": "2019-03-17T04:24:19.000Z",
-    "updated_at": "2019-03-17T04:24:19.000Z"
+    "created_at": "2019-03-17T05:48:02.000Z",
+    "updated_at": "2019-03-17T05:48:02.000Z"
 }
 ```
  

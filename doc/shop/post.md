@@ -26,7 +26,7 @@
 
 * **Success Response:**
 
-  * **Code:** 200 <br />
+  * **Code:** 201 CREATED <br />
  
 * **Error Response:**
 

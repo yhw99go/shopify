@@ -4,7 +4,7 @@
 
 * **URL**
 
-  /products/id
+  /products/:id
 
 * **Method:**
 
@@ -27,22 +27,40 @@
 * **Error Response:**
 
   * **Code:** 404 NOT FOUND <br />
-    **Content:** `{ error : Couldn't find Shop with 'id'= % }`
+    **Content:** `{ error : Couldn't find Product with 'id'= % }`
 
 
 **Content examples**
 
-For a product with ID on the local database
+show product with related line items on the local database
 
 ```json
 {
     "id": 1,
-    "name": "Dreadnaught IPA",
+    "name": "Pliny The Elder",
     "description": "Vegetable Beer",
-    "price": 47,
+    "line_items": [
+        {
+            "id": 1,
+            "product_id": 1,
+            "order_id": 1,
+            "price": 100,
+            "created_at": "2019-03-17T05:17:46.000Z",
+            "updated_at": "2019-03-17T05:44:17.000Z"
+        },
+        {
+            "id": 2,
+            "product_id": 1,
+            "order_id": 1,
+            "price": 100,
+            "created_at": "2019-03-17T05:17:46.000Z",
+            "updated_at": "2019-03-17T05:44:17.000Z"
+        }
+    ],
+    "price": 100,
     "quantity": 2,
-    "created_at": "2019-03-17T01:12:43.000Z",
-    "updated_at": "2019-03-17T01:12:43.000Z"
+    "created_at": "2019-03-17T05:17:46.000Z",
+    "updated_at": "2019-03-17T05:34:09.000Z"
 }
 ```
  

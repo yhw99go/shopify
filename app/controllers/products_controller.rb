@@ -27,6 +27,11 @@ class ProductsController < ApplicationController
   # PATCH/PUT /products/1
   def update
     if @product.update(product_params)
+
+        for item in @product.line_items
+          item.price = @product.price
+          item.save
+        end
       render json: @product
     else
       render json: @product.errors, status: :unprocessable_entity

@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 2019_03_17_004646) do
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.text "description"
+    t.text "line_items"
     t.decimal "price", precision: 10
     t.integer "quantity"
     t.datetime "created_at", null: false

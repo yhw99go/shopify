@@ -4,7 +4,7 @@
 
 * **URL**
 
-  /products/id
+  /products/:id
 
 * **Method:**
 

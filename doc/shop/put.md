@@ -37,7 +37,7 @@
 
 **Content examples**
 
-Create a shop with new ID and given name on the local database where that Shop has empty orders and products
+Update a shop with new name
 
 ```json
 {
