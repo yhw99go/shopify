@@ -17,28 +17,28 @@ after data is migrated, you can run app by
 
 Each endpoint manipulates or displays information related to the Shop
 
-* [Show Shop](doc/shop/get.md) : `GET /api/shop/`
-* [Create Shop](doc/shop/post.md) : `POST /api/shop/`
-* [Update Shop](doc/shop/put.md) : `PUT /api/shop/`
-* [Delete Shop](doc/shop/put.md) : `DELETE /api/shop/`
+* [Show Shop](doc/shop/get.md) : `GET /api/shops/`
+* [Create Shop](doc/shop/post.md) : `POST /api/shops/`
+* [Update Shop](doc/shop/put.md) : `PUT /api/shops/`
+* [Delete Shop](doc/shop/put.md) : `DELETE /api/shops/`
 
 ### Product related
 
 Each endpoint manipulates or displays information related to the Product
 
-* [Show Product](doc/product/get.md) : `GET /api/product/`
-* [Create Product](doc/product/post.md) : `POST /api/product/`
-* [Update Product](doc/product/put.md) : `PUT /api/product/`
-* [Delete Product](doc/product/put.md) : `DELETE /api/product/`
+* [Show Product](doc/product/get.md) : `GET /api/products/`
+* [Create Product](doc/product/post.md) : `POST /api/products/`
+* [Update Product](doc/product/put.md) : `PUT /api/products/`
+* [Delete Product](doc/product/put.md) : `DELETE /api/products/`
 `
 ### Order related
 
 Each endpoint manipulates or displays information related to the Order
 
-* [Show Order](doc/order/get.md) : `GET /api/order/`
-* [Create Order](doc/order/post.md) : `POST /api/order/`
-* [Update Order](doc/order/put.md) : `PUT /api/order/`
-* [Delete Order](doc/order/put.md) : `DELETE /api/order/`
+* [Show Order](doc/order/get.md) : `GET /api/orders/`
+* [Create Order](doc/order/post.md) : `POST /api/orders/`
+* [Update Order](doc/order/put.md) : `PUT /api/orders/`
+* [Delete Order](doc/order/put.md) : `DELETE /api/orders/`
 
 ### Line Items related
 
