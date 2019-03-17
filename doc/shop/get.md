@@ -4,7 +4,7 @@
 
 * **URL**
 
-  /shops/:id
+  /shops/id
 
 * **Method:**
 
@@ -14,7 +14,7 @@
 
    **Required:**
  
-   `id=[integer]`
+   `id=integer`
 
 * **Data Params**
 
@@ -27,7 +27,7 @@
 * **Error Response:**
 
   * **Code:** 404 NOT FOUND <br />
-    **Content:** `{ error : "User doesn't exist" }`
+    **Content:** `{ error : Couldn't find Shop with 'id'= % }`
 
 
 **Content examples**
