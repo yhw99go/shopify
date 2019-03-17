@@ -4,7 +4,7 @@
 
 * **URL**
 
-  /shops/:id
+  /shops/id
 
 * **Method:**
 
@@ -14,7 +14,7 @@
 
    **Required:**
  
-   `id=[integer]`
+   `id= integer`
 
 * **Data Params**
 
@@ -27,9 +27,11 @@
 * **Error Response:**
 
   * **Code:** 404 NOT FOUND <br />
-    **Content:** `{ error : "Couldn't find Shop with 'id'=%" }`
+    **Content:** `{ error : "Couldn't find Shop with 'id'= %" }`
 
 
-**Notes**
+## Notes
 
- 
+* If the shops have Products, and Orders. products and orders that belongs to the shop will be deleted as well.
+
+* For Delete endpoint, authentication token should be added in future
