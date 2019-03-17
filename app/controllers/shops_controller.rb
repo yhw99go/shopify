@@ -16,7 +16,6 @@ class ShopsController < ApplicationController
   # GET /shops/1
   def show
     @shop = Shop.find(params[:id])
-    #@shop.description = shop.orders
     render json: @shop
   end
 

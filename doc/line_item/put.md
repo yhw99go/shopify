@@ -1,4 +1,4 @@
-**Update Shop**
+**Update Line Item**
 ----
   Return json data with updated line item information.
 

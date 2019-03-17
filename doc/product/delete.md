@@ -1,4 +1,4 @@
-**Delete Shop**
+**Delete Product**
 ----
   Delete a Product from database with given id
 

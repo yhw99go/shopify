@@ -1,4 +1,4 @@
-**Show Product**
+**Show Line Item**
 ----
   Return json data about a single line item.
 
@@ -32,16 +32,17 @@
 
 **Content examples**
 
-For an order with ID, return the list of line items, total price and its quantity
+return the product id, price and order id if it belongs to order
 ```json
 {
     "id": 1,
-    "shop_id": 1,
-    "description": "[#<LineItem id: 1, product_id: 1, order_id: 1, price: 47, created_at: \"2019-03-17 01:12:43\", updated_at: \"2019-03-17 01:12:43\">, #<LineItem id: 2, product_id: 1, order_id: 1, price: 47, created_at: \"2019-03-17 01:12:43\", updated_at: \"2019-03-17 01:12:43\">]",
-    "totalprice": 94,
-    "quantity": 2,
+    "product_id": 1,
+    "order_id": 1,
+    "price": 47,
     "created_at": "2019-03-17T01:12:43.000Z",
     "updated_at": "2019-03-17T01:12:43.000Z"
 }
 ```
+
+
  

@@ -1,4 +1,4 @@
-**Create Shop**
+**Create Product**
 ----
   Return json data with created single product.
 

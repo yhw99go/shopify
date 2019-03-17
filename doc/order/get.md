@@ -1,4 +1,4 @@
-**Show Product**
+**Show Order**
 ----
   Return json data about a single Order.
 
