@@ -1,24 +1,50 @@
-# README
+# Shopify Internship API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project mainly using Ruby on Rail and MySQL as database
+to migrate db
 
-Things you may want to cover:
+`> rake db:migrate`
 
-* Ruby version
+and then, to create mock data
 
-* System dependencies
+`> rake db:seed`
 
-* Configuration
+after data is migrated, you can run app by
 
-* Database creation
+`> rails s`
 
-* Database initialization
+### Shop related
 
-* How to run the test suite
+Each endpoint manipulates or displays information related to the Shop
 
-* Services (job queues, cache servers, search engines, etc.)
+* [Show Shop](doc/shop/get.md) : `GET /api/shop/`
+* [Create Shop](doc/shop/post.md) : `POST /api/shop/`
+* [Update Shop](doc/shop/put.md) : `PUT /api/shop/`
+* [Delete Shop](doc/shop/put.md) : `DELETE /api/shop/`
 
-* Deployment instructions
+### Product related
 
-* ...
+Each endpoint manipulates or displays information related to the Product
+
+* [Show Product](doc/product/get.md) : `GET /api/product/`
+* [Create Product](doc/product/post.md) : `POST /api/product/`
+* [Update Product](doc/product/put.md) : `PUT /api/product/`
+* [Delete Product](doc/product/put.md) : `DELETE /api/product/`
+`
+### Order related
+
+Each endpoint manipulates or displays information related to the Order
+
+* [Show Order](doc/order/get.md) : `GET /api/order/`
+* [Create Order](doc/order/post.md) : `POST /api/order/`
+* [Update Order](doc/order/put.md) : `PUT /api/order/`
+* [Delete Order](doc/order/put.md) : `DELETE /api/order/`
+
+### Line Items related
+
+Each endpoint manipulates or displays information related to the Shop
+
+* [Show Line Items](doc/line_items/get.md) : `GET /api/line_items/`
+* [Create Line Items](doc/line_items/post.md) : `POST /api/line_items/`
+* [Update Line Items](doc/line_items/put.md) : `PUT /api/line_items/`
+* [Delete Line Items](doc/line_items/put.md) : `DELETE /api/line_items/`
