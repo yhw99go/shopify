@@ -1,4 +1,4 @@
-**Delete Order**
+**Delete Line Item**
 ----
   Delete a Line Item from database with given id
 
