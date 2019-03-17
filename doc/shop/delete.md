@@ -33,5 +33,3 @@
 ## Notes
 
 * If the shops have Products, and Orders. products and orders that belongs to the shop will be deleted as well.
-
-* For Delete endpoint, authentication token should be added in future
