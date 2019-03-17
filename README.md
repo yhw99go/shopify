@@ -45,7 +45,7 @@ Each endpoint manipulates or displays information related to the Order
 
 Each endpoint manipulates or displays information related to the Shop
 
-* [Show Line Items](doc/line_items/get.md) : `GET /api/line_items/`
-* [Create Line Items](doc/line_items/post.md) : `POST /api/line_items/`
-* [Update Line Items](doc/line_items/put.md) : `PUT /api/line_items/`
-* [Delete Line Items](doc/line_items/put.md) : `DELETE /api/line_items/`
+* [Show Line Items](doc/line_item/get.md) : `GET /api/line_items/`
+* [Create Line Items](doc/line_item/post.md) : `POST /api/line_items/`
+* [Update Line Items](doc/line_item/put.md) : `PUT /api/line_items/`
+* [Delete Line Items](doc/line_item/put.md) : `DELETE /api/line_items/`
