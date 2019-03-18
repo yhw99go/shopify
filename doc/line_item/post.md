@@ -18,12 +18,12 @@
 
 * **Data Params**
 
-  ```json
-{
-    "product_id": integer
-    "order_id": integer [optional]
-}
-  ```
+ ```json
+  {
+      "product_id": integer
+      "order_id": integer [optional]
+  }
+ ```
 
 * **Success Response:**
 
