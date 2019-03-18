@@ -52,8 +52,10 @@ Each endpoint manipulates or displays information related to the Shop
 
 * I assumed that many shops have many products, Thus, made a join table between shop and product
 
-* Some Authentication token needed to give access to the user, based on their positions.
-For example, User(shop owner) only able to get their own shop informations and modify the 
-Order informations while Admin(Shopify) can perform CRUD for each services upon their aggrement with shop owners
+* Authentication tokens are needed in order to give access to users, based on their positions. 
+
+ For example, the user (shop owner) is only able to access shop informations and modify order informations, while the admin   (Shopify) can perform CRUD for all services upon agreement with shop owners.
+  
+* Dockerfile added, but not fully implemented
 
 
