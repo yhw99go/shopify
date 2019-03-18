@@ -16,7 +16,7 @@ development:
   database: shopify
   host: localhost
   username: root
-  password: 123456 #I had an empty string here before
+  password: 123456 
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
