@@ -1,6 +1,6 @@
 # Shopify Internship API
 
-This project mainly using Ruby on Rails and MySQL as database
+This project mainly using Ruby on Rails(2.3.7) and MySQL as database.
 
 to migrate db
 
@@ -15,7 +15,6 @@ after data is migrated, you can run app by
 `> rails s`
 
 ### Shop related
-
 Each endpoint manipulates or displays information related to the Shop
 
 * [Show Shop](doc/shop/get.md) : `GET /api/shops/`
@@ -24,7 +23,6 @@ Each endpoint manipulates or displays information related to the Shop
 * [Delete Shop](doc/shop/delete.md) : `DELETE /api/shops/`
 
 ### Product related
-
 Each endpoint manipulates or displays information related to the Product
 
 * [Show Product](doc/product/get.md) : `GET /api/products/`
@@ -49,3 +47,13 @@ Each endpoint manipulates or displays information related to the Shop
 * [Create Line Items](doc/line_item/post.md) : `POST /api/line_items/`
 * [Update Line Items](doc/line_item/put.md) : `PUT /api/line_items/`
 * [Delete Line Items](doc/line_item/delete.md) : `DELETE /api/line_items/`
+
+### Note
+
+* I assumed that many shops have many products, Thus, made a join table between shop and product
+
+* Some Authentication token needed to give access to the user, based on their positions.
+For example, User(shop owner) only able to get their own shop informations and modify the 
+Order informations while Admin(Shopify) can perform CRUD for each services upon their aggrement with shop owners
+
+
